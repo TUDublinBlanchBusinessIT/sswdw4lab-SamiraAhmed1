@@ -19,7 +19,10 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO member (firstname, surname) VALUES ('john', 'doe')";
+$X = $_POST['firstName'];
+$Y = $_POST['lastName'];
+
+$sql = "INSERT INTO member (firstname, surname) VALUES ('$X','$Y')";
 
 mysqli_query($conn, $sql);
 
